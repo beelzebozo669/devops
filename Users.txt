@@ -1,0 +1,400 @@
+Users with entries in both SLC_EMPLOYEES and DBA_USERS - this is the ideal result
+USERNAME                       FORENAMES                                          SURNAME                                                      PERSONNEL CREATED
+------------------------------ -------------------------------------------------- ------------------------------------------------------------ --------- ----------
+CULBERA                        ANGELA                                             GIBB                                                         9492      02/02/2004
+GREGORGL                       GLENN                                              GREGORY                                                                18/12/2018
+HEDGEMA                        MAHESH                                             HEDGE                                                                  15/03/2019
+KUBICMA                        MATUEZS                                            KUBICKI                                                                27/04/2018
+LAWRENMA                       MATTHEW                                            LAWRENCE                                                     23769     18/07/2015
+MCPIKEL                        LYNETTE                                            MCPIKE                                                       10395     02/02/2004
+TEIRNECA                       CARLY                                              TEIRNEY                                                      30338     29/08/2015
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Users last logged into CLASS:
+USERNAME                       LOGIN
+------------------------------ -------------------
+LAWRENMA                       23/09/2016 10:21:31	Matched  SLC_EMPLOYEES
+BRODIE                         16/08/2018 12:07:12  No Match SLC_EMPLOYEES
+KUBICMA                        29/08/2018 08:02:36	Matched  SLC_EMPLOYEES
+TEIRNECA                       21/11/2018 10:06:01	Matched  SLC_EMPLOYEES
+CULBERA                        27/03/2019 10:34:23	Matched  SLC_EMPLOYEES
+GREGORGL                       11/06/2019 09:28:47	Matched  SLC_EMPLOYEES
+HEDGEMA                        24/07/2019 10:40:44	Matched  SLC_EMPLOYEES
+MCPIKEL                        07/02/2020 08:54:16	Matched  SLC_EMPLOYEES
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The following list of UserID's should be locked immediately in DBA_USERS:
+BRODIE
+BROWNDAV
+CORTOPS
+KIRKTONJOH
+MCLINCH
+MONEYDI
+PAREKHCH
+PMCCANAN
+RKERRO
+TUNAM
+YOUNGGSH
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Checked UserID's against netywork and only found one that is active:
+
+BRODIE
+H:\>net user brodie /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+BROWNDAV
+H:\>net user browndav /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+User name                    browndav
+Full Name                    David Brown Viewdeck
+Comment                      TG Performance and Change - Viewdeck Consultant
+User's comment
+Country code                 (null)
+Account active               Yes
+Account expires              03/09/2020 23:00:00
+
+Password last set            12/02/2020 12:30:57
+Password expires             11/03/2020 12:30:57
+Password changeable          13/02/2020 12:30:57
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script
+User profile
+Home directory               \\slcbothusers\users\browndav
+Last logon                   12/02/2020 13:51:30
+
+Logon hours allowed          All
+
+Local Group Memberships      *SEC_DLG_TG Project_St*SEC_DLG_TG_Operations
+Global Group memberships     *Commercial and Vendor*Project_ICT Systems D
+                             *Domain Users         *Licensing-Collaborati
+                             *Licensing-SharePoint *Admin-Jira-TG
+                             *Licensing-Standard   *SCCM-Desktops-Teams C
+                             *Admin-Confluence-TG  *PMO_TIME
+                             *SEC_ITS_Contracts_DB *IBM Sametime Users
+                             *Procurement          *Internal Service Prov
+                             *Lic-Jira-TG-Users    *Lic-Confluence-TG-Use
+The command completed successfully.
+
+CORTOPS
+H:\>net user cortops /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+KIRKTONJOH
+H:\>net user KIRKTONJOH /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+MCLINCH
+H:\>net user MCLINCH /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+MONEYDI
+H:\>net user MONEYDI /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+PAREKHCH
+H:\>net user PAREKHCH /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+PMCCANAN
+H:\>net user PMCCANAN /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+RKERRO
+H:\>net user RKERRO /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+TUNAM
+H:\>net user TUNAM /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+
+YOUNGGSH
+H:\>net user YOUNGGSH /domain
+The request will be processed at a domain controller for domain slc.co.uk.
+
+The user name could not be found.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Users where UserID partially matches UserID's supplied from SLC_EMPLOYEES:
+CLASS_USER_ID                  SURNAME                                                      FORENAMES
+------------------------------ ------------------------------------------------------------ --------------------------
+BRODID                         BRODIE                                                       DIANA
+BRODIDAR                       BRODIE                                                       DARREN
+BRODIED                        BRODIE                                                       DAVID
+BRODIEDA                       BRODIE                                                       DARREN
+BRODIEE                        BRODIE                                                       ERIN
+BRODIEI                        BRODIE                                                       ISOBEL
+BRODIEJ                        BRODIE                                                       JOHN
+BRODIEL                        BRODIE                                                       LESLEY JANE
+BROWNDA                        BROWN                                                        DAVID
+BROWNDAV_OLD                   BROWN                                                        DAVID
+CORBEC                         CORBETT                                                      CLAIRE
+CORBEJE                        CORBETT                                                      JENNIFER
+CORBETA                        CORBET                                                       ANGUS
+CORBETJ                        CORBETT                                                      JASON
+CORBETN                        CORBETT                                                      NAN
+CORBJE                         CORBETT                                                      JENNIFER
+CORCCL                         CORCORAN                                                     CLARE
+CORCORANJ                      CORCORAN                                                     JADE
+CORCOSA                        CORCORAN                                                     SARAH
+CORDINJ                        CORDINER                                                     JAMES
+CORLETK                        CORLETTO                                                     KIRSTY
+CORLEYP                        CORLEY                                                       PATRICK
+CORMACA                        CORMACK                                                      ANDREW
+CORMACF                        CORMACK                                                      FRASER
+CORMACN                        CORMACK                                                      NATHAN
+CORNHILE                       CORNHILL                                                     ELLIOT
+CORNISCH                       CORNISH                                                      CHARLIE
+CORNISH                        CORNISH                                                      HARRY
+CORNISHA                       CORNISH                                                      HARRY
+CORNISJ                        CORNISH                                                      JACK
+CORNISTE                       CORNISH                                                      TERENCE
+CORRAL                         CORR                                                         ALANA
+CORRDAV                        CORRIGAN                                                     DAVID
+CORRIGC                        CORRIGAN                                                     CLAIRE
+CORRIGS                        CORRIGAN                                                     STEPHANIE
+CORRJ                          CORR                                                         JENNA
+CORRYMAR                       CORRY                                                        MARGARET
+CORSERL                        CORSER                                                       LOUISE
+CORSONK                        CORSON                                                       KIM
+CORYDA                         CORY                                                         DAVID
+KIRKA                          KIRK                                                         ALISON
+KIRKBYN                        KIRKBY                                                       NICHOLAS
+KIRKK                          KIRK                                                         KERRY
+KIRKKAT                        KIRK                                                         KATHRYN
+KIRKL                          KIRK                                                         LESLEY
+KIRKPA                         KIRK                                                         PAUL
+KIRKPAE                        KIRKPATRICK                                                  EILIDH
+KIRKPAT                        KIRKPATRICK                                                  TAMMIE
+KIRKPAV                        KIRKPATRICK                                                  VIKI
+KIRKRO                         KIRK                                                         ROBERT
+KIRKWOD                        KIRKWOOD                                                     DAVID
+KIRKWOE                        KIRKWOOD                                                     ELAINE
+KIRKWOJ                        KIRKWOOD                                                     JIM
+KIRKWOK                        KIRKWOOD                                                     KATIE
+KIRKWOKE                       KIRKWOOD                                                     KELLY
+KIRKWOODS                      KIRKWOOD                                                     SUZANNE
+KIRKWST                        KIRKWOOD                                                     STEPHANIE
+MCLINED                        MCLINN                                                       EDEN
+MCLINJ                         MCLINDEN                                                     JOHN
+MCLINTJ                        MCLINTOCK                                                    JOHN
+MCLINTJE                       MCLINTOCK                                                    JENNIFER
+MCLINTS                        MCLINTOCK                                                    SCOTT
+MONAGC                         MONAGHAN                                                     CHRISTOPHER
+MONAGHJ                        MONAGHAN                                                     JAMES
+MONAGHJA                       MONAGHAN                                                     JAMES
+MONAGHJAD                      MONAGHAN                                                     JADE
+MONAGHK                        MONAGHAN                                                     KARL
+MONAGHKA                       MONAGHAN                                                     KATY
+MONAGHM                        MONAGHAN                                                     MARY
+MONAGHS                        MONAGHAN                                                     SAMANTHA
+MONAGKE                        MONAGHAN                                                     KERRY
+MONAGP                         MONAGHAN                                                     PAUL
+MONAHC                         MONAHAN                                                      CRAIG
+MONAMOL                        MONAHAN                                                      MOLLY
+MONCRID                        MONCRIEFF                                                    DAVID
+MONDALSU                       MONDAL                                                       SUKANTA
+MONES                          MONE                                                         SIMON
+MONIGAPA                       MONIGATTI                                                    PAUL
+MONKMS                         MONKMAN                                                      STEPHEN
+MONTAA                         MONTAGHIAN                                                   ARYANA
+MONTEIC                        MONTEITH                                                     CLAIRE
+MONTEIG                        MONTEITH                                                     GARRETT
+MONTEIJ                        MONTEITH                                                     JAMES
+MONTGC                         MONTGOMERY                                                   CHRISTOPHER
+MONTGCR                        MONTGOMERY                                                   CRAIG
+MONTGG                         MONTGOMERY                                                   GERALDINE
+MONTGM                         MONTGOMERY                                                   MARK
+MONTGOA                        MARSHALL                                                     ALISON
+MONTGOJ                        MONTGOMERY                                                   JAMES
+MONTGOMA                       MONTGOMERY                                                   ANN
+MONTGOS                        MONTGOMERY                                                   SUSAN
+MONTGOSC                       MONTGOMERY                                                   SCOTT
+MONTGOSCO                      MONTGOMERY                                                   SCOTT
+MONTGOT                        MONTGOMERY                                                   THOMAS
+MONTGOW                        MONTGOMERY                                                   WILLIAM
+MONTJAC                        MONTGOMERY                                                   JACK
+PARACCAN                       PARACCO                                                      ANDREW
+PARAKHA                        PARAKH                                                       AARYAN
+PARASSR                        PARASA                                                       SREENIVASA
+PARDESPR                       PARDESHI                                                     PRAJAKTA
+PARDESR                        PARDESI                                                      RITESH
+PARFECD                        PARFECT                                                      DAVID
+PARFIT                         PARFITT                                                      THOMAS
+PARFITO                        PARFITT                                                      TOM
+PARIDATA                       PARIDA                                                       TAPAN
+PARITOMO                       PARI                                                         TOMOS
+PARITTH                        PARITT                                                       HEATHER
+PARKA                          PARK                                                         ADRIENNE
+PARKAN                         PARK                                                         ANDREW
+PARKAND                        PARK                                                         ANDREW JAMES
+PARKB                          PARK                                                         BILL
+PARKC                          PARK                                                         COLIN
+PARKD                          PARK                                                         DAVID
+PARKDA                         PARK                                                         DAVID
+PARKEA                         PARKER                                                       ADRIAN
+PARKEF                         PARK                                                         FIONA
+PARKEJ                         PARKER                                                       JAMES
+PARKEK                         PARKER                                                       KELLY
+PARKEM                         PARK                                                         EMMA
+PARKERA                        ALISON                                                       PARKER
+PARKERAA                       PARKER                                                       AARON
+PARKERAL                       PARKER                                                       ALEX
+PARKERC                        PARKER                                                       CARL
+PARKERCL                       PARKER                                                       CLAIR
+PARKERD                        PARKER                                                       DOROTHY
+PARKERF                        PATERSON                                                     ROBERT
+PARKERFR                       PARKER                                                       FRANCIS
+PARKERKE                       PARKER                                                       KEITH
+PARKERM                        PARKER                                                       MIRIAM
+PARKERMA                       PARKER                                                       MATTHEW
+PARKEVA                        PARK                                                         EVAN
+PARKEW                         PARKER                                                       WENDY
+PARKHD                         PARKHILL                                                     DANIELLE
+PARKHIR                        PARKHILL                                                     ROSS
+PARKIH                         PARKIN                                                       HOLLY
+PARKINA                        PARKIN                                                       AMY
+PARKIND                        PARKIN                                                       DANIEL
+PARKINMI                       PARKINSON                                                    MICHAEL
+PARKINRE                       PARKIN                                                       REBECCA
+PARKINS                        PARKINS                                                      SHARON
+PARKINSS                       PARKINSON                                                    STEFAN
+PARKIS                         PARKIN                                                       SHARON
+PARKISO                        PARKIN                                                       SOPHIE
+PARKJ                          PARK                                                         JULIE
+PARKL                          PARK                                                         LOUISE
+PARKLI                         PARK                                                         LISA
+PARKR                          PARK                                                         RODNEY
+PARKRU                         PARK                                                         RUSSELL
+PARKST                         PARK                                                         STUART
+PARKSTA                        PARK                                                         STACEY
+PARMERU                        PARMER                                                       UDAY
+PARNABA                        PARNABY                                                      ANDREW
+PARNELJ                        PARNELL                                                      JESSICA
+PARRAM                         PARRY                                                        AMANDA
+PARRCRA                        PARR                                                         CRAIG
+PARRD                          PARR                                                         DARREN
+PARRTH                         PARR                                                         THOMAS
+PARRYA                         PARRY                                                        ADELE
+PARRYAD                        PARRY                                                        ADAM
+PARRYF                         PARRY                                                        FAYE
+PARRYJ                         PARRY                                                        JAKE
+PARRYJA                        PARRY                                                        JAKE
+PARRYK                         PARRY                                                        KIM
+PARRYM                         PARRY                                                        MICHAEL
+PARRYMI                        PARRY                                                        MICHAEL
+PARSOHE                        PARSONS                                                      HEATHER
+PARSOJO                        PARSON                                                       JOF
+PARSOK                         PARSONS                                                      KATE
+PARSOND                        PARSONS                                                      DAVID
+PARSONH                        PARSONS                                                      HELEN
+PARTHAR                        PARTHASARTHY                                                 RAJAN
+PARTRIL                        PARTRIDGE                                                    LUCY
+PARVEEN                        PARVEEN                                                      NABILA
+PARVET                         PARVEZ                                                       TAHIRA
+PARVEZO                        PARVEZ                                                       OMAIR
+RKANEK                         KANE                                                         KIERAN
+RKANER                         KANE                                                         RYAN
+TUNGT                          TUNG                                                         TING
+TUNSTEM                        TUNSTEAD                                                     MICHELLE
+YOUNGA                         YOUNG                                                        ALAN
+YOUNGAL                        YOUNG                                                        ALISON
+YOUNGAN                        YOUNG                                                        ANTHONY
+YOUNGAND                       YOUNG                                                        ANDY
+YOUNGANDY                      YOUNG                                                        ANDY
+YOUNGB                         YOUNG                                                        BARRY
+YOUNGBE                        YOUNG                                                        BETH
+YOUNGC                         YOUNG                                                        CLAIRE
+YOUNGCA                        YOUNG                                                        CAITLAN
+YOUNGCH                        YOUNG                                                        CHERYL
+YOUNGCH_OLD                    YOUNG                                                        CHRISTOPHER
+YOUNGCO                        YOUNG                                                        COLIN
+YOUNGD                         YOUNG                                                        DEREK
+YOUNGDA                        YOUNG                                                        DAVID
+YOUNGDE                        YOUNG                                                        DEBORAH
+YOUNGE                         YOUNG                                                        ELEANOR
+YOUNGEA                        YOUNGER                                                      ANDREW
+YOUNGEL                        YOUNGER                                                      LYNETTE
+YOUNGFL                        YOUNG                                                        FLORA
+YOUNGG                         YOUNG                                                        GREG
+YOUNGH                         YOUNG                                                        HAZEL
+YOUNGI                         YOUNG                                                        IAIN
+YOUNGIN                        YOUNG                                                        GINA
+YOUNGJ                         YOUNG                                                        JAMES
+YOUNGJ1                        YOUNG                                                        JAMES
+YOUNGJA                        YOUNG                                                        JACQUELINE
+YOUNGJE                        YOUNG                                                        JENNIFER
+YOUNGJEN                       YOUNG                                                        JENNIFER
+YOUNGJO                        YOUNG                                                        JOHN
+YOUNGJU                        YOUNG                                                        JULIE
+YOUNGJUL                       YOUNG                                                        JULIE
+YOUNGK                         YOUNG                                                        KIRSTY
+YOUNGKA                        YOUNG                                                        KATHRYN MARIE
+YOUNGKE                        YOUNG                                                        KEITH
+YOUNGKEI                       YOUNG                                                        KEIR
+YOUNGL                         YOUNG                                                        LESLEY ANN
+YOUNGLA                        YOUNG                                                        LESLEY ANN
+YOUNGLAU                       YOUNG                                                        LAURA
+YOUNGLAUR                      YOUNG                                                        LAURA
+YOUNGLI                        YOUNG                                                        LISA
+YOUNGLI_OLD                    YOUNG                                                        LISA
+YOUNGLJ                        YOUNG                                                        LAURA JAYNE
+YOUNGLJA                       YOUNG                                                        LAURA-JAYNE
+YOUNGLO                        YOUNG                                                        LOUISE
+YOUNGLOU                       YOUNG                                                        LOUISE
+YOUNGLY                        YOUNG                                                        LYNN
+YOUNGM                         YOUNG                                                        MARK
+YOUNGMA                        YOUNG                                                        MARTIN
+YOUNGNI                        YOUNG                                                        NICOLLE
+YOUNGPA                        YOUNG                                                        PAUL
+YOUNGPH                        YOUNG                                                        PHIL
+YOUNGR                         YOUNG                                                        ROBERT
+YOUNGRA                        YOUNG                                                        RACHEL
+YOUNGRAC                       YOUNG                                                        RACHEL
+YOUNGRA_OLD                    YOUNG                                                        RACHEL
+YOUNGRO                        YOUNG                                                        ROBERT
+YOUNGS                         YOUNG                                                        SHEILAGH
+YOUNGSA                        YOUNG                                                        SARAH
+YOUNGSE                        YOUNG                                                        SEAN
+YOUNGSH                        YOUNG                                                        SHONA
+YOUNGST                        YOUNG                                                        STEPHANIE
+YOUNGSTU                       YOUNG                                                        STUART
+YOUNGSU                        YOUNG                                                        SUSAN
+YOUNGY                         YOUNG                                                        YVETTE
+YOUNGZ                         YOUNG                                                        ZAK
+
+244 rows selected.
